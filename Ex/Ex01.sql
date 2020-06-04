@@ -13,25 +13,25 @@ select employee_id as empNO, first_name "E-name", salary "연 봉" from employee
 select first_name "이름", phone_number "전화번호", hire_date "입사일", salary "급여" from employees;
 
 select  first_name "이름",
-    last_name "성",
-    salary "급여",
-    phone_number "전화번호",
-    email "이메일",
-    hire_date "입사일"
-from employees;
+        last_name "성",
+        salary "급여",
+        phone_number "전화번호",
+        email "이메일",
+        hire_date "입사일"
+from    employees;
 
 /* 셀렉트문 컬럼 합치기 */
-select first_name || last_name
-from employees;
+select  first_name || last_name
+from    employees;
 
-select first_name ||' '|| last_name as fullname
-from employees;
+select  first_name ||' '|| last_name as fullname
+from    employees;
 
-select first_name ||'''s hire date is '|| hire_date as empinfo
-from employees;
+select  first_name ||'''s hire date is '|| hire_date as empinfo
+from    employees;
 
-select first_name "이름", salary "월급", salary*12 "연봉"
-from employees;
+select  first_name "이름", salary "월급", salary*12 "연봉"
+from    employees;
 
 --문제풀기
 select  first_name ||'-'|| last_name "성명",
@@ -39,12 +39,12 @@ select  first_name ||'-'|| last_name "성명",
         salary*12 "연봉",
         (salary*12+5000) "연봉2",
         phone_number "전화번호"
-from employees;
+from    employees;
 
 --where절 사용하기
-select *
-from employees
-where department_id=10;
+select  *
+from    employees
+where   department_id=10;
 
 select  first_name,
         salary
