@@ -108,7 +108,17 @@ order by LENGTH(department_name) desc;
 올림차순(ASC)으로 정렬해 보세오.
 */
 
-
+select  upper(country_name)
+from    countries
+where   country_id in (
+    select  country_id
+    from    locations
+    where   location_id in (
+        select location_id
+        from departments
+    )
+)
+order by countries.country_name asc;
 
 
 /*
@@ -123,3 +133,4 @@ select  first_name,
         hire_date
 from    employees
 where   hire_date<'03/12/31';
+
