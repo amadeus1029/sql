@@ -114,8 +114,8 @@ where   country_id in (
     select  country_id
     from    locations
     where   location_id in (
-        select location_id
-        from departments
+        select  location_id
+        from    departments
     )
 )
 order by countries.country_name asc;
