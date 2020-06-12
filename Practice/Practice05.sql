@@ -238,4 +238,3 @@ where
         jb.job_id = avg.job_id
   and
         avgSal = maxSal;
-        
